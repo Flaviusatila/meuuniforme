@@ -15,15 +15,19 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
+//Classe que faz toda a logica de sistema de negocios do sistema;
 @Service
 public class EstacionamentoService {
 
+    //esta injetando a dependencia do service, entao esta criando automaticamente quando sobre o projeto
     @Autowired
     private EstacionamentoRepository estacionamentoRepository;
 
+    //esta injetando a dependencia do service, entao esta criando automaticamente quando sobre o projeto
     @Autowired
     private VeiculoRepository veiculoRepository;
 
+    //metodo que cadastra o estacionamento na base de dados atraves do veiculoRepository
     public EstacionamentoDTO cadastrarEstacionamento(EstacionamentoDTO dto) {
         try{
             Estacionamento obj = dto.toEntity();
@@ -34,6 +38,9 @@ public class EstacionamentoService {
         }
     }
 
+    //Anotation que faz o controle de busca de acordo com o tempo
+    //Metodo que atualiza a hora de estacionamento do veiculo de acordo com o id do veiculo
+    //e o estacionamento utlizado
     @Transactional
     public EstacionamentoDTO atulizaHoraEstacionamento(Long id, EstacionamentoDTO dto) {
         try {
@@ -46,6 +53,8 @@ public class EstacionamentoService {
         }
     }
 
+    //Anotation que faz o controle de busca de acordo com o tempo
+    //Metodo que busca os valores recebidos do estacionamento
     @Transactional
     public EstacionamentoDTO buscarFaturamento() {
         try{

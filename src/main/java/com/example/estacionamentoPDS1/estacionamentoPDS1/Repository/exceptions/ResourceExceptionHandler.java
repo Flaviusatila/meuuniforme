@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.Instant;
-
+//Controllador de erros onde pega todos os erros da Api e envia personalizada
+//ao usuario da API
 @ControllerAdvice
 public class ResourceExceptionHandler {
 

@@ -6,6 +6,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
+//Classe diretamente ligada a base de dados para fazer as tabelas e atributos
 @Entity
 @Table(name = "tb_veiculo")
 public class Veiculo implements Serializable {

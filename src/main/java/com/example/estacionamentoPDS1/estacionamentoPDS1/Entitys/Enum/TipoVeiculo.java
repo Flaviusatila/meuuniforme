@@ -1,5 +1,6 @@
 package com.example.estacionamentoPDS1.estacionamentoPDS1.Entitys.Enum;
 
+//Classe para definir o tipo de veiculo estacionado
 public enum TipoVeiculo {
 
     CARRO(0),

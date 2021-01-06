@@ -5,26 +5,33 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.io.Serializable;
-
+//Classe que faz a integração dos dados
+// recebidos para o sistema sem acessar diretamente a base de dados
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class EstacionamentoDTO implements Serializable {
 
     private static final long serialVersionUID = -2279197097929539041L;
 
+    //Identificador do objeto
     private Long id;
 
+    //Anotation para identificar o nome no json e linkar com o atributo
     @JsonProperty("valor_hora")
     private Double valorHora;
 
+    //Anotation para identificar o nome no json e linkar com o atributo
     @JsonProperty("total_faturamento")
     private Double totalFaturamento;
 
+    //Anotation para identificar o nome no json e linkar com o atributo
     @JsonProperty("total_faturamento_carro")
     private Double totalFaturamentoCarro;
 
+    //Anotation para identificar o nome no json e linkar com o atributo
     @JsonProperty("total_faturamento_moto")
     private Double totalFaturamentoMoto;
 
+    //Anotation para identificar o nome no json e linkar com o atributo
     @JsonProperty("total_faturamento_utilitario")
     private Double totalFaturamentoUtilitario;
 

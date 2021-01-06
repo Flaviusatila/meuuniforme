@@ -11,13 +11,15 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
+//Classe que faz toda a logica de sistema de negocios do sistema;
 @Service
 public class VeiculoService {
 
+    //esta injetando a dependencia do service, entao esta criando automaticamente quando sobre o projeto
     @Autowired
     private VeiculoRepository repository;
 
-
+    //metodo que cadastra o veiculo em um estacionamento na base de dados atraves do veiculoRepository
     public VeiculoDTO cadastraVeiculo(VeiculoDTO dto , Long id) {
 
         try{
@@ -33,6 +35,8 @@ public class VeiculoService {
     }
 
 
+    //Anotation que faz o controle de busca de acordo com o tempo
+    //Metodo que busca os o veiculo pela placa
     @Transactional
     public VeiculoDTO pesquisarPlaca(String placa){
         try {
@@ -48,7 +52,8 @@ public class VeiculoService {
         }
             throw new ResourceNotFoundException( "Nao Encontrada nenhuma placa" );
     }
-
+    //Anotation que faz o controle de busca de acordo com o tempo
+    //Metodo que atuliza a hora de saida de um veiculo pelo id do veiculo
     @Transactional
     public VeiculoDTO atualizaHoraSaida(Long id) {
         try {

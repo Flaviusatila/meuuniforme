@@ -8,7 +8,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import java.io.Serializable;
 import java.util.Objects;
-
+//Classe para fazer a ligação entre veiculo e estacionamento
 @Embeddable
 public class VeiculosPk implements Serializable {
 
